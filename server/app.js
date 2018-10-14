@@ -6,7 +6,7 @@ const schema = require('./schema/schema');
 
 const app = express();
 
-mongoose.connect('mongodb://jp-dev:Werwerwer333@ds163162.mlab.com:63162/emaily-dev-jp');
+mongoose.connect('mongodb://jasper:Werwerwer333@ds247290.mlab.com:47290/gql-test');
 mongoose.connection.once('open', () => {
   console.log('connected to mlab database..');
 });
