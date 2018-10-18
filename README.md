@@ -1,1 +1,4 @@
-# express-graphql
+# Express, Graphql, Mongo, React
+
+## Getting started
+
