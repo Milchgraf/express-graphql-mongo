@@ -23,15 +23,19 @@ const cors = require('cors');
 
 2. import GraphQL-Schema
 
-`const schema = require('./schema/schema');`
+```javascript
+const schema = require('./schema/schema');
+```
 
 3. use express
 
-`const app = express();`
+```javascript
+const app = express();
+```
 
 4. connect to mongodb database
 
-```
+```javascript
 mongoose.connect('mongodb://localhost:27017/gql-demo');
 mongoose.connection.once('open', () => {
   console.log('connected to mlab database..');
