@@ -83,6 +83,25 @@ const Author = require('../models/author');
 const { GraphQLObjectType, GraphQLString, GraphQLSchema, GraphQLID, GraphQLInt, GraphQLList, GraphQLNonNull } = graphql;
 ```
 
+### 3. create some types i.e. BookType (simple get operation)
+
+```javascript
+const BookType = new GraphQLObjectType({
+  name: 'Book',
+  fields: () => ({
+    id: { type: GraphQLID },
+    name: { type: GraphQLString },
+    genre: { type: GraphQLString },
+    author: {
+      type: AuthorType,
+      resolve(parent, args) {
+        return Author.findById(parent.authorId);
+      }
+    }
+  })
+});
+```
+
 
 
 
