@@ -102,8 +102,66 @@ const BookType = new GraphQLObjectType({
 });
 ```
 
+### 4. create RootQuery
 
+```javascript
+const RootQuery = new GraphQLObjectType({
+  name: 'RootQueryType',
+  fields: {
+    book: {
+      type: BookType,
+      args: {
+        id: { type: GraphQLID }
+      },
+      resolve(parent, args) {
+        // code to get data from db / other source
+        //return _.find(books, { id: args.id });
+        return Book.findById(args.id);
+      }
+    },
+    books: {
+      type: GraphQLList(BookType),
+      resolve(parent, args) {
+        //return books;
+        return Book.find({});
+      }
+    }
+  }
+});
+```
 
+### 5. create mutations
+
+```
+const Mutation = new GraphQLObjectType({
+  name: 'Mutation',
+  fields: {
+    addBook: {
+      type: BookType,
+      args: {
+        name: { type: new GraphQLNonNull(GraphQLString) },
+        genre: { type: new GraphQLNonNull(GraphQLString) }
+      },
+      resolve(parent, args) {
+        let book = new Book({
+          name: args.name,
+          genre: args.genre
+        });
+        return book.save();
+      }
+    }
+  }
+});
+```
+
+### 6. export GraphQLSchema
+
+```
+module.exports = new GraphQLSchema({
+  query: RootQuery,
+  mutation: Mutation
+});
+```
 
 
 
