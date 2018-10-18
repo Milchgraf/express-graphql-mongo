@@ -31,7 +31,14 @@ class AddBook extends Component {
     // stop refreshing page
     event.preventDefault();
 
-    console.log(this.state);
+    // call addBookMutation
+    this.props.addBookMutation({
+      variables: {
+        name: this.state.name,
+        genre: this.state.genre,
+        authorId: this.state.authorId
+      }
+    });
   }
 
   render() {
