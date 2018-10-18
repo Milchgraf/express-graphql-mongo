@@ -47,8 +47,18 @@ mongoose.connection.once('open', () => {
 ```javascript
 app.use('/graphql', graphqlHTTP({
   schema,
+  
+  // optional UI:
   graphiql: true
 }));
+```
+
+6. start server
+
+```javascript
+app.listen(4000, () => {
+  console.log('Listen on port 4000..');
+});
 ```
 
 
