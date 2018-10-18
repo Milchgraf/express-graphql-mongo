@@ -12,7 +12,7 @@
 
 ## Create app.js file
 
-1. import dependencies
+### 1. import dependencies
 
 ```javascript
 const express = require('express');
@@ -21,19 +21,19 @@ const mongoose =  require('mongoose');
 const cors = require('cors');
 ```
 
-2. import GraphQL-Schema
+### 2. import GraphQL-Schema
 
 ```javascript
 const schema = require('./schema/schema');
 ```
 
-3. use express
+### 3. use express
 
 ```javascript
 const app = express();
 ```
 
-4. connect to mongodb database
+### 4. connect to mongodb database
 
 ```javascript
 mongoose.connect('mongodb://localhost:27017/gql-demo');
@@ -42,7 +42,7 @@ mongoose.connection.once('open', () => {
 });
 ```
 
-5. use graphql endpoint with schema as option
+### 5. use graphql endpoint with schema as option
 
 ```javascript
 app.use('/graphql', graphqlHTTP({
@@ -53,7 +53,7 @@ app.use('/graphql', graphqlHTTP({
 }));
 ```
 
-6. start server
+### 6. start server
 
 ```javascript
 app.listen(4000, () => {
