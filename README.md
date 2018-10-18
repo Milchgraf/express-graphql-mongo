@@ -8,7 +8,9 @@
 4. mongoose
 5. cors (optional)
 
-`npm i express graphql express-graphql mongoose cors`
+```console
+npm i express graphql express-graphql mongoose cors
+```
 
 ## Create app.js file
 
