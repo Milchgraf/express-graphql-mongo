@@ -132,7 +132,7 @@ const RootQuery = new GraphQLObjectType({
 
 ### 5. create mutations
 
-```
+```javascript
 const Mutation = new GraphQLObjectType({
   name: 'Mutation',
   fields: {
@@ -156,7 +156,7 @@ const Mutation = new GraphQLObjectType({
 
 ### 6. export GraphQLSchema
 
-```
+```javascript
 module.exports = new GraphQLSchema({
   query: RootQuery,
   mutation: Mutation
