@@ -61,6 +61,16 @@ app.listen(4000, () => {
 });
 ```
 
+## Create schema.js file
+
+### 1. import dependencies
+
+```javascript
+const graphql = require('graphql');
+const Book = require('../models/book');
+const Author = require('../models/author');
+```
+
 
 
 
