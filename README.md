@@ -41,3 +41,31 @@ mongoose.connection.once('open', () => {
   console.log('connected to mlab database..');
 });
 ```
+
+5. use graphql endpoint with schema as option
+
+```javascript
+app.use('/graphql', graphqlHTTP({
+  schema,
+  graphiql: true
+}));
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
