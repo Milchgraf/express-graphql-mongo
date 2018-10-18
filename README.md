@@ -61,6 +61,12 @@ app.listen(4000, () => {
 });
 ```
 
+### [OPTIONAL] allow cors
+
+```javascript
+app.use(cors());
+```
+
 ## Create schema.js file
 
 ### 1. import dependencies
@@ -71,6 +77,11 @@ const Book = require('../models/book');
 const Author = require('../models/author');
 ```
 
+### 2. import GraphQL-Datatypes
+
+```javascript
+const { GraphQLObjectType, GraphQLString, GraphQLSchema, GraphQLID, GraphQLInt, GraphQLList, GraphQLNonNull } = graphql;
+```
 
 
 
