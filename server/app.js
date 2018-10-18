@@ -11,7 +11,8 @@ const app = express();
 app.use(cors());
 
 // connect to mlab database
-mongoose.connect('mongodb://jasper:Werwerwer333@ds247290.mlab.com:47290/gql-test');
+//mongoose.connect('mongodb://jasper:Werwerwer333@ds247290.mlab.com:47290/gql-test');
+mongoose.connect('mongodb://localhost:27017/gql-demo');
 mongoose.connection.once('open', () => {
   console.log('connected to mlab database..');
 });
