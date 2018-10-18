@@ -165,17 +165,29 @@ module.exports = new GraphQLSchema({
 });
 ```
 
+## Create a model i.e. book.js
 
+### 1. import mongoose
 
+```javascript
+const mongoose = require('mongoose');
+```
 
+### 2. create mongoose-schema
 
+```javascript
+const Schema = mongoose.Schema;
 
+const bookSchema = new Schema({
+  name: String,
+  genre: String,
+  authorId: String
+});
+```
 
+### 3. export schema
 
-
-
-
-
-
-
+```javascript
+module.exports = mongoose.model('Book', bookSchema);
+```
 
