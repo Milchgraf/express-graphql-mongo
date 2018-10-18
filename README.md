@@ -14,12 +14,12 @@
 
 1. import dependencies
 
-`
+```
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
 const mongoose =  require('mongoose');
 const cors = require('cors');
-`
+```
 
 2. import GraphQL-Schema
 
@@ -31,9 +31,9 @@ const cors = require('cors');
 
 4. connect to mongodb database
 
-`
+```
 mongoose.connect('mongodb://localhost:27017/gql-demo');
 mongoose.connection.once('open', () => {
   console.log('connected to mlab database..');
 });
-`
+```
