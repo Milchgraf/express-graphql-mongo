@@ -82,7 +82,15 @@ const Author = require('../models/author');
 ### 2. import GraphQL-Datatypes
 
 ```javascript
-const { GraphQLObjectType, GraphQLString, GraphQLSchema, GraphQLID, GraphQLInt, GraphQLList, GraphQLNonNull } = graphql;
+const {
+  GraphQLObjectType,
+  GraphQLString,
+  GraphQLSchema,
+  GraphQLID,
+  GraphQLInt,
+  GraphQLList,
+  GraphQLNonNull
+} = graphql;
 ```
 
 ### 3. create some types i.e. BookType (simple get operation)
