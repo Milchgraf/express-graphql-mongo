@@ -40,7 +40,7 @@ const app = express();
 ```javascript
 mongoose.connect('mongodb://localhost:27017/gql-demo');
 mongoose.connection.once('open', () => {
-  console.log('connected to mlab database..');
+  console.log('connected to database..');
 });
 ```
 
